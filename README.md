@@ -1,21 +1,33 @@
-# Sistema de Gestion de Tareas
+# Sistema de Gestion de Tareas (To-Do List) 📝
 
-Aplicacion web para gestionar tareas diarias.
+Aplicacion web SPA para la gestion eficiente de tareas diarias.
 
-## Funcionalidades
-- [x] Agregar Tareas
-- [x] Eliminar Tareas
+## 🚀 Funcionalidades
+- [x] **Agregar Tareas:** Permite ingresar descripciones.
+- [x] **Estado:** Marcar tareas como completadas.
+- [x] **Eliminacion:** Borrar tareas de la lista.
 
-## Arquitectura
+## 🛠️ Tecnologías
+* **Frontend:** HTML5, CSS3, JavaScript (Vanilla ES6).
+* **Control:** Git & GitHub.
+* **IDE:** Visual Studio Code.
 
-### Diagrama 1
-```mermaid
-graph TD
-    A["index.html"] --> B["styles.css"]
-    A --> C["script.js"]
-    User["Usuario"] --> A
-    graph TD
-    A["Inicio"] --> B{"Campo vacio?"}
-    B -- Si --> C["Alerta"]
-    B -- No --> D["Crear Tarea"]
-    D --> E["Fin"]
+## 📐 Arquitectura del Sistema
+
+### 1. Diagrama de Arquitectura
+```text
+[ index.html ]  <------>  [ script.js ]
+      |                        ^
+      | Importa                | Interactua
+      v                        |
+[ styles.css ]            (( USUARIO ))
+
+( INICIO )
+     |
+     v
+< ¿Campo Vacio? > ---- SI ----> [ Mostrar Alerta ]
+     |
+     NO
+     |
+     v
+[ Crear Tarea ] --> [ Agregar a Lista ] --> ( FIN )
