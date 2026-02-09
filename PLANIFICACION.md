@@ -1,21 +1,26 @@
-# Planificación del Proyecto: Gestor de Tareas Personal
+# Sistema de Gestión de Tareas (To-Do List) 📝
 
-## 1. Objetivos del Proyecto
-Desarrollar una aplicación web tipo SPA (Single Page Application) que permita organizar actividades diarias, aplicando buenas prácticas de ingeniería de software como control de versiones y documentación técnica.
+Aplicación web SPA (Single Page Application) para la gestión eficiente de tareas diarias. Proyecto integrador para la asignatura de Ingeniería de Software.
 
-## 2. Funcionalidades Prioritarias (MVP)
-1.  **Ingreso de datos:** Formulario para capturar título de la tarea.
-2.  **Visualización:** Lista dinámica que muestra las tareas pendientes.
-3.  **Interacción:** Botón para marcar tareas como "Completadas" o eliminarlas.
+## 🚀 Funcionalidades
+- [x] **Agregar Tareas:** Permite ingresar descripciones dinámicas.
+- [x] **Estado:** Marcar tareas como completadas (efecto visual).
+- [x] **Eliminación:** Borrar tareas de la lista.
+- [x] **Validación:** Impide crear tareas vacías.
 
-## 3. Herramientas Tecnológicas
--   **Editor:** Visual Studio Code.
--   **Control de Versiones:** Git & GitHub.
--   **Frontend:** HTML5, CSS3, JavaScript (ES6).
--   **Diagramación:** (Aquí pondremos la herramienta que uses, ej: Draw.io).
+## 🛠️ Tecnologías
+* **Frontend:** HTML5, CSS3, JavaScript (Vanilla ES6).
+* **Control de versiones:** Git & GitHub.
+* **IDE:** Visual Studio Code.
 
-## 4. Cronograma Estimado
--   **Fase 1:** Configuración y Planificación (Completado).
--   **Fase 2:** Estructura HTML y Estilos CSS (2 horas).
--   **Fase 3:** Lógica JavaScript y Depuración (3 horas).
--   **Fase 4:** Documentación y Entrega (1 hora).
+## 📐 Arquitectura del Sistema
+
+### 1. Diagrama de Arquitectura (MVC Simplificado)
+Muestra cómo se comunican los archivos del proyecto.
+
+```mermaid
+graph TD
+    A[index.html] -->|Importa| B(styles.css)
+    A -->|Importa| C(script.js)
+    C -->|Manipula DOM| A
+    User((Usuario)) -->|Interactúa| A
