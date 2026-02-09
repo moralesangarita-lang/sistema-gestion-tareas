@@ -1,34 +1,28 @@
-# Sistema de Gestión de Tareas (To-Do List) 📝
+# Sistema de Gestion de Tareas
 
-Aplicación web SPA (Single Page Application) para la gestión eficiente de tareas diarias. Proyecto integrador para la asignatura de Ingeniería de Software.
+Aplicacion web SPA para la gestion de tareas.
 
-## 🚀 Funcionalidades
-- [x] **Agregar Tareas:** Permite ingresar descripciones dinámicas.
-- [x] **Estado:** Marcar tareas como completadas (efecto visual).
-- [x] **Eliminación:** Borrar tareas de la lista.
-- [x] **Validación:** Impide crear tareas vacías.
+## Funcionalidades
+- [x] Agregar Tareas
+- [x] Estado Completado
+- [x] Eliminar Tareas
 
-## 🛠️ Tecnologías
-* **Frontend:** HTML5, CSS3, JavaScript (Vanilla ES6).
-* **Control de versiones:** Git & GitHub.
-* **IDE:** Visual Studio Code.
+## Arquitectura
 
-## 📐 Arquitectura del Sistema
-
-### 1. Diagrama de Arquitectura (MVC Simplificado)
+### 1. Diagrama de Arquitectura
 ```mermaid
 graph TD
-    A[index.html] -->|Importa| B(styles.css)
-    A -->|Importa| C(script.js)
+    A["index.html"] -->|Importa| B("styles.css")
+    A -->|Importa| C("script.js")
     C -->|Manipula DOM| A
-    User((Usuario)) -->|Interactúa| A
-    
-graph TD
-    A[Inicio] --> B{¿El campo está vacío?}
-    B -- Sí --> C[Mostrar Alerta 'Escribe una tarea']
-    C --> D[Fin]
-    B -- No --> E[Crear elemento LI]
-    E --> F[Agregar botón eliminar]
-    F --> G[Agregar a la lista UL]
-    G --> H[Limpiar Input]
-    H --> I[Fin]
+    User(("Usuario")) -->|Interactua| A 
+
+    graph TD
+    A["Inicio"] --> B{"Campo vacio?"}
+    B -- Si --> C["Mostrar Alerta"]
+    C --> D["Fin"]
+    B -- No --> E["Crear Tarea"]
+    E --> F["Boton Eliminar"]
+    F --> G["Agregar a Lista"]
+    G --> H["Limpiar Input"]
+    H --> I["Fin"]
