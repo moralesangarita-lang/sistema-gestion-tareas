@@ -32,4 +32,25 @@ graph TD
     E --> F[Agregar botón eliminar]
     F --> G[Agregar a la lista UL]
     G --> H[Limpiar Input]
+<<<<<<< HEAD:lectura.md
     H --> I[Fin]
+=======
+    H --> I[Fin]
+    ---
+
+### 2. Los Comandos (Commits) para la Terminal
+Una vez guardes el archivo (`Ctrl + S`), abre la terminal de VS Code y ejecuta estos 3 comandos en orden:
+
+1.  **Prepara el archivo:**
+    ```bash
+    git add .
+    ```
+2.  **Guarda el cambio (Este será tu commit final):**
+    ```bash
+    git commit -m "docs: agrega documentacion final del proyecto"
+    ```
+3.  **Súbelo a GitHub:**
+    ```bash
+    git push
+    ```
+>>>>>>> 2e4d98e4facf13fcda73b0fc8d230ff86ec8eb67:README.md
